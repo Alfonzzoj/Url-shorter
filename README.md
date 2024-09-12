@@ -90,6 +90,7 @@ Algunos apartados que se pueden implementar para la mejora de la aplicación son
 3.  Gráficas para registrar de que país son los visitantes de cada link
 4.  Autenticación por usuario, permitiéndole a cada usuario tener sus urls personalizadas a cada uno.
 5.  Agregar integracion continua (Apartado CONFIGURACION CI/CD)
+6.  Agregar boton de copiado en portapapeles
 
 ## Configuracion CI/CD
 
