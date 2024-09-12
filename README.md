@@ -89,6 +89,35 @@ Algunos apartados que se pueden implementar para la mejora de la aplicación son
 2.  Generación de Qr, para el uso de dispositivos móviles inteligentes, acceder al link o copiarlo, además de la descarga de la imagen de este
 3.  Gráficas para registrar de que país son los visitantes de cada link
 4.  Autenticación por usuario, permitiéndole a cada usuario tener sus urls personalizadas a cada uno.
+5.  Agregar integracion continua (Apartado CONFIGURACION CI/CD)
+
+## Configuracion CI/CD
+
+Para bonus se puede agregar un action de github personalizado para hacer deploy en producción automaticamente al subir un commit
+
+```yaml
+name: 🚀 Deploy website on push
+	on:
+		push:
+			branches:
+				- master
+jobs:
+	web-deploy:
+		name: 🎉 Deploy
+		runs-on: ubuntu-latest
+		steps:
+			- name: 🚚 Get latest code
+				uses: actions/checkout@v3
+			- name: 📂 Sync files
+				uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+		with:
+			server: ${{ secrets.FTP_HOST}}
+			username: ${{ secrets.FTP_USER}}
+			password: ${{ secrets.FTP_PASSWORD }}
+			server-dir: ${{ secrets.FTP_DIR }}
+```
+
+Todo esto creando los secrets del repositorio respectivamente
 
 ---
 
