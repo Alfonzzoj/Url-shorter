@@ -130,19 +130,19 @@ const App = () => {
                                         {urlAcortada.url}
                                     </li>
                                     <li className="list-group-item w-75">
-                                        {urlAcortada.full_shortened_url ?? (
-                                            <a
-                                                href={
-                                                    urlAcortada.full_shortened_url
-                                                }
-                                                target="_blank"
-                                                rel="noopener noreferrer"
-                                            >
-                                                {/* {urlAcortada.url +
+                                        <a
+                                            href={
+                                                urlAcortada.full_shortened_url ??
+                                                urlAcortada.shortened
+                                            }
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                        >
+                                            {/* {urlAcortada.url +
                                                     urlAcortada.slug} */}
-                                                {urlAcortada.full_shortened_url}
-                                            </a>
-                                        )}
+                                            {urlAcortada.full_shortened_url ??
+                                                urlAcortada.shortened}
+                                        </a>
                                     </li>
                                 </ul>
                             ))}
