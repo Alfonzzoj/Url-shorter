@@ -12,6 +12,13 @@ use Illuminate\Support\Str;
 class UrlController extends Controller
 {
 
+    public function test()
+    {
+        return response()->json([
+            'status' => true,
+            'message' => 'API is working'
+        ]);
+    }
     public function getLinks()
     {
         $links = Link::all();
