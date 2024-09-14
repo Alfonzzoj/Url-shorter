@@ -130,8 +130,8 @@ const App = () => {
                                         {urlAcortada.url}
                                     </li>
                                     <li className="list-group-item w-75">
-                                        {urlAcortada.full_shortened_url}
-                                        {/* <a
+                                        {/* {urlAcortada.full_shortened_url} */}
+                                        <a
                                             href={
                                                 urlAcortada.full_shortened_url
                                             }
@@ -139,7 +139,7 @@ const App = () => {
                                             rel="noopener noreferrer"
                                         >
                                             {urlAcortada.full_shortened_url}
-                                        </a> */}
+                                        </a>
                                     </li>
                                 </ul>
                             ))}
