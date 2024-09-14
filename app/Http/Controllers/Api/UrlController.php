@@ -61,12 +61,12 @@ class UrlController extends Controller
                     $url = "http://" . $url;
                 }
 
-                $contents = file_get_contents($url);
-                if (preg_match('/<title>([^<]*)<\/title>/i', $contents, $matches)) {
-                    $title = $matches[1];
-                } else {
-                    $title = 'No title';
-                }
+                // $contents = file_get_contents($url);
+                // if (preg_match('/<title>([^<]*)<\/title>/i', $contents, $matches)) {
+                //     $title = $matches[1];
+                // } else {
+                //     $title = 'No title';
+                // }
                 $slug = Str::random(8);
                 $link = Link::create([
                     'title' => $title ?? 'undefined',
