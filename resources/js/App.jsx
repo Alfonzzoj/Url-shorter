@@ -132,12 +132,13 @@ const App = () => {
                                     <li className="list-group-item w-75">
                                         {urlAcortada.shortened ?? (
                                             <a
-                                                href={urlAcortada.url}
+                                                href={urlAcortada.shortened}
                                                 target="_blank"
                                                 rel="noopener noreferrer"
                                             >
-                                                {urlAcortada.url +
-                                                    urlAcortada.slug}
+                                                {/* {urlAcortada.url +
+                                                    urlAcortada.slug} */}
+                                                {urlAcortada.shortened}
                                             </a>
                                         )}
                                     </li>
